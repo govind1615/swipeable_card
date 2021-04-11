@@ -55,6 +55,9 @@ class _FeedViewState extends State<FeedView> {
                         itemBuilder: (_, index) {
                           return Draggable(
                               axis: Axis.vertical,
+                              feedback: FeedCard(
+                                feedData: feedProvider.feedData[index],
+                              ),
                               affinity: Axis.vertical,
                               onDragEnd: (int) {
                                 print(int.offset.direction > 1);
