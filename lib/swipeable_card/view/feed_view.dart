@@ -16,12 +16,6 @@ class FeedView extends StatefulWidget {
 
 class _FeedViewState extends State<FeedView> {
   PageController _pageController = PageController();
-  Duration pageTurnDuration = Duration(milliseconds: 0);
-  final border = OutlineInputBorder(
-      borderRadius: BorderRadius.all(Radius.circular(90.0)),
-      borderSide: BorderSide(
-        color: Colors.transparent,
-      ));
 
   @override
   void initState() {
@@ -81,7 +75,7 @@ class _FeedViewState extends State<FeedView> {
                         },
                       ),
                     ),
-                    if (Provider.of<FeedProvider>(context, listen: true)
+                    if (feedProvider
                         .showAppBar)
                       Positioned(
                         top: 10,
